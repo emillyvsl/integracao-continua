@@ -19,10 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Node.js
+      - name: Set up Node.js and Angular CLI
         uses: actions/setup-node@v3
         with:
           node-version: 14
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
       - name: Install Dependencies
         working-directory: sgcmapp/
         run: npm install
