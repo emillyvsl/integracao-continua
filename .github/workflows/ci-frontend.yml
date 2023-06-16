@@ -10,9 +10,9 @@ on:
       - 'sgcmapp/**'
 
 permissions:
-   contents: write
-   pull-requests: write
-   issues: write
+  contents: write
+  pull-requests: write
+  issues: write
 
 jobs:
   build:
@@ -28,7 +28,7 @@ jobs:
         run: npm ci
       - name: Run Tests
         working-directory: sgcmapp/
-        run: ng test --no-watch --no-progress
+        run: npm run test
       - name: Build
         working-directory: sgcmapp/
-        run: ng build
+        run: npm run build
