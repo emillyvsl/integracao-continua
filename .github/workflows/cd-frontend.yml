@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 14
       - name: Install Railway CLI
-        run: npm install -g @railway/cli
+        run: npm install -g @railway/cli@latest
       - name: Deploy to Railway
         working-directory: sgcmapp/
         run: railway up --detach --service sgcmapp
