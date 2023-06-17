@@ -1,13 +1,14 @@
-name: CI Front-end
-
+name: CI Front-End
 on:
   push:
+    paths:
+      - 'sgcmapi/**'
     branches:
       - '**'
       - '!main'
   pull_request:
     paths:
-      - 'sgcmapp/**'
+      - 'sgcmapi/**'
 
 permissions:
    contents: write
