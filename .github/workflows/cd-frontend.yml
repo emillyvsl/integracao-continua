@@ -6,17 +6,16 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy to Railway
+    name: Deploy Railway
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14
-      - name: Install Railway CLI
-        run: npm install -g @railway/cli@latest
-      - name: Deploy to Railway
+          node-version: 18
+      - name: Instalação do cliente Railway
+        run: npm install -g @railway/cli
+      - name: Deploy
         working-directory: sgcmapp/
         run: railway up --detach --service sgcmapp
         env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_FRONT }}
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
