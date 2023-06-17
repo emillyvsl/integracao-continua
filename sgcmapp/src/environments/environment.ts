@@ -1,3 +1,3 @@
 export const environment = {
-    API_URL: 'https://sgcmapi2.up.railway.app/'
+    API_URL: 'https://sgcmapi-emi.up.railway.app'
 };
